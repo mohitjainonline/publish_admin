@@ -4278,7 +4278,7 @@ exports.default = SignUpForm;
 },{"material-ui/Card":25,"material-ui/RaisedButton":33,"material-ui/TextField":41,"react":510,"react-router":422}],10:[function(require,module,exports){
 'use strict';
 
-var env = 'local',
+var env = 'qa',
     config = {
 	local: {
 		protocol: 'http',
@@ -4287,18 +4287,18 @@ var env = 'local',
 	},
 	qa: {
 		protocol: 'https',
-		rootApi: 'glacial-inlet-83305.herokuapp.com/api',
-		rootApp: 'localhost:8080'
+		rootApi: 'schmgm-nodeservices.herokuapp.com/api',
+		rootApp: 'https://sch-login.herokuapp.com'
 	},
 	uat: {
 		protocol: 'https',
-		rootApi: 'glacial-inlet-83305.herokuapp.com/api',
-		rootApp: 'localhost:8080'
+		rootApi: 'schmgm-nodeservices.herokuapp.com/api',
+		rootApp: 'https://sch-login.herokuapp.com'
 	},
 	live: {
 		protocol: 'https',
-		rootApi: 'glacial-inlet-83305.herokuapp.com/api',
-		rootApp: 'localhost:8080'
+		rootApi: 'schmgm-nodeservices.herokuapp.com/api',
+		rootApp: 'https://sch-login.herokuapp.com'
 	}
 };
 
@@ -4840,8 +4840,8 @@ var routes = {
       if (_Auth2.default.isUserAuthenticated()) {
         callback(null, _DashboardPage2.default);
       } else {
-        callback(null, _HomePage2.default);
-        //window.location.href = "http://localhost:8080"
+        //callback(null, HomePage);
+        window.location.href = "https://sch-login.herokuapp.com";
       }
     }
   }, {
